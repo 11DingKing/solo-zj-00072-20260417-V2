@@ -5,6 +5,12 @@ services:
       - "20717:20717"
     volumes:
       - /data/db # Create a volume for the DB.
+  redis:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
   client:
     container_name: client
     build:
@@ -25,6 +31,7 @@ services:
       dockerfile: Dockerfile.dev
     depends_on:
       - mongo
+      - redis
     env_file:
       - server.dev.env
     ports:
@@ -33,3 +40,6 @@ services:
     volumes:
       - ./server:/app #Synchronise docker container with local change
       - /app/node_modules #Avoid re-copying local node_modules. Cache in volume.
+
+volumes:
+  redis_data:

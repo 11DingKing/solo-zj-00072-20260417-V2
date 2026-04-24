@@ -52,3 +52,60 @@ body {
   font-size: 10px;
   width: 160px;
 }
+
+.password-requirements {
+  margin-top: 8px;
+  padding: 12px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  width: 220px;
+}
+
+.requirements-title {
+  margin: 0 0 8px 0;
+  font-size: 12px;
+  font-weight: bold;
+  color: #495057;
+}
+
+.requirement-item {
+  display: flex;
+  align-items: center;
+  font-size: 11px;
+  margin: 4px 0;
+}
+
+.requirement-item.neutral {
+  color: #6c757d;
+}
+
+.requirement-item.met {
+  color: #28a745;
+}
+
+.requirement-item.unmet {
+  color: #dc3545;
+}
+
+.requirement-item .icon {
+  margin-right: 6px;
+  font-size: 12px;
+  min-width: 14px;
+  text-align: center;
+}
+
+.password-valid {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #dee2e6;
+  font-size: 12px;
+  font-weight: bold;
+  color: #28a745;
+}
+
+.password-valid .valid-icon {
+  margin-right: 6px;
+  font-size: 14px;
+}

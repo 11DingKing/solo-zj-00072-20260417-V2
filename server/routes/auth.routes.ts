@@ -31,4 +31,6 @@ router.post("/send-confirmation", AuthControllers.postVerify);
 
 router.get("/confirmation/:token", AuthControllers.getConfirmation);
 
+router.get("/unlock/:token", AuthControllers.getUnlockAccount);
+
 export default router;
